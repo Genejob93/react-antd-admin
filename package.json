@@ -2,7 +2,7 @@
   "name": "react-antd-template-admin",
   "version": "1.0.0",
   "description": "一个基于react antd 的后端管理项目模板",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --env=development --mode=development",
     "build": "cross-env NODE_ENV=production webpack --env=production --mode=production",
