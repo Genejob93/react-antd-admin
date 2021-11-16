@@ -1,5 +1,9 @@
 /**
- * webpack 配置文件
+ * @author: Gene
+ * @age: 永远18岁的美少年
+ * @Email： Genejob@163.com
+ * @date: 2021-11-16 15:06:41
+ * @description: webpack的配置文件,根据不同需求,加载不同环境配置
  */
 const path = require("path")
  const { merge } = require('webpack-merge');
