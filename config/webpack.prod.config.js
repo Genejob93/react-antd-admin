@@ -5,3 +5,8 @@
 * @date: 2021-11-16 15:09:26
 * @description: webpack 生产环境配置
 */
+
+const path = require("path")
+const webpack = require('webpack');
+module.exports = {
+};

@@ -30,7 +30,7 @@ module.exports = {
     },
     // 项目中 别名的配置
     resolve: {
-        extensions: [".js", "jsx", "tsx", ".vue", ".json", ".css"],
+        // extensions: [".js", "jsx", "tsx", ".vue", ".json", ".css", "less", "scss"],
         alias: {
             "@": path.resolve(__dirname, "../src")
         }
@@ -41,7 +41,8 @@ module.exports = {
         rules: [{
                 test: /\.css$/,
                 use: [
-                    MiniCssExtract.loader,
+                    "style-loader",
+                    // MiniCssExtract.loader,
                     {
                         loader: 'css-loader',
                         options: {
@@ -63,7 +64,8 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    MiniCssExtract.loader,
+                    "style-loader",
+                    // MiniCssExtract.loader,
                     'css-loader',
                     {
                         loader: "postcss-loader"
@@ -74,21 +76,14 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtract.loader,
+                    "style-loader",
+                    // MiniCssExtract.loader,
                     'css-loader',
                     {
                         loader: "postcss-loader"
                     },
                     'sass-loader'
                 ]
-            },
-            {
-                test: /\.js$/, //普通的loader
-                //不包括node_modules
-                exclude: /node_modules/,
-                use: [{
-                    loader: "babel-loader"
-                }]
             },
         ]
     },
