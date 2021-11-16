@@ -10,7 +10,7 @@ const path = require("path")
 const webpack = require('webpack');
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
+console.log("prod 加载了 ----")
 module.exports = {
     optimization: {
         minimizer: [
