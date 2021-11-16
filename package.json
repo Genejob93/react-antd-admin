@@ -1,0 +1,29 @@
+{
+  "name": "react-antd-template-admin",
+  "version": "1.0.0",
+  "description": "一个基于react antd 的后端管理项目模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Genejob93/react-antd-template-admin.git"
+  },
+  "keywords": [
+    "react",
+    "antd",
+    "管理项目模板"
+  ],
+  "author": "Gene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Genejob93/react-antd-template-admin/issues"
+  },
+  "homepage": "https://github.com/Genejob93/react-antd-template-admin#readme",
+  "devDependencies": {
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  }
+}
