@@ -48,7 +48,7 @@ module.exports = {
                         options: {
                             url: true, // 启动 或者 禁用  url 解析功能.  url(./tang.jpg);
                             import: true, // 是否允许 或者说 禁用 @import 语法处理 @import "base.css"
-                            modules: true, // 是否允许 css 模块化
+                            // modules: true, // 是否允许 css 模块化
                             sourceMap: true, // 是否生成 sourceMap
                             // importLoaders: true, // 放在 CSS 兼容性的时候演示
                             // 默认情况下,  css-loader 会生成一个使用 ES Module的模块对象, 如果你设置为 true 的话, 那就会包装成 ESMODULES,导出是一个对象
@@ -63,27 +63,11 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                use: [
-                    "style-loader",
-                    // MiniCssExtract.loader,
-                    'css-loader',
-                    {
-                        loader: "postcss-loader"
-                    },
-                    'less-loader'
-                ]
+                use: ["style-loader", 'css-loader', "postcss-loader",'less-loader']
             },
             {
                 test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    // MiniCssExtract.loader,
-                    'css-loader',
-                    {
-                        loader: "postcss-loader"
-                    },
-                    'sass-loader'
-                ]
+                use: ["style-loader",'css-loader', "postcss-loader",'sass-loader']
             },
         ]
     },

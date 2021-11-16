@@ -7,7 +7,6 @@
  */
 const path = require("path")
 const webpack = require('webpack');
-console.log("dev 加载了 ----")
 module.exports = {
     devServer: {
         // contentBase: './dist',

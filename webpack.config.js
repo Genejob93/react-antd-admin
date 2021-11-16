@@ -14,7 +14,6 @@ const devConfig = require(path.resolve(__dirname, "config/webpack.dev.config"))
 const prodConfig = require(path.resolve(__dirname, "config/webpack.prod.config"))
 
 module.exports = () => {
-  console.log(123123, process.env.NODE_ENV)
   switch (process.env.NODE_ENV) {
     case 'development':
       return merge(baseConfig, devConfig);
