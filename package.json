@@ -4,8 +4,8 @@
   "description": "一个基于react antd 的后端管理项目模板",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --env=development --mode=development",
-    "build": "cross-env NODE_ENV=production webpack --env=production --mode=production",
+    "dev": "cross-env NODE_ENV=development webpack serve  --mode=development",
+    "build": "cross-env NODE_ENV=production webpack  --mode=production",
     "test": "test"
   },
   "repository": {
@@ -24,8 +24,20 @@
   },
   "homepage": "https://github.com/Genejob93/react-antd-template-admin#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "mini-css-extract-plugin": "^2.4.4",
+    "node-sass": "^6.0.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0",

@@ -6,7 +6,9 @@
  * @description: webpack的配置文件,根据不同需求,加载不同环境配置
  */
 const path = require("path")
-const {merge} = require('webpack-merge');
+const {
+  merge
+} = require('webpack-merge');
 const baseConfig = require(path.resolve(__dirname, "config/webpack.base.config"))
 const devConfig = require(path.resolve(__dirname, "config/webpack.base.config"))
 const prodConfig = require(path.resolve(__dirname, "config/webpack.base.config"))
