@@ -14,7 +14,7 @@ module.exports = {
         port: '8080',
         compress: false, // webpack5中把  inline 改成了 compress,
         open: true, // 自动打开浏览器
-        hot: true //允许热加载
+        hot: true, //允许热加载
     },
     //启用source-map方便调试
     devtool: 'source-map',
@@ -22,7 +22,7 @@ module.exports = {
         //定义模块内的全局变量
         new webpack.DefinePlugin({
             //这里必须要解析成字符串进行判断，不然将会被识别为一个变量
-            DEV: JSON.stringify('dev')
-        })
-    ]
+            DEV: JSON.stringify('dev'),
+        }),
+    ],
 };

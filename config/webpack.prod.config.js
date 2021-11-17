@@ -8,7 +8,9 @@
 
 const path = require("path")
 const webpack = require('webpack');
+//css压缩
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
+//压缩js文件
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     optimization: {
@@ -22,15 +24,15 @@ module.exports = {
                 //使用多线程并行运行提高构建速度
                 parallel: true,
                 //使用 SourceMaps 将错误信息的位置映射到模块
-                sourceMap: true
-            })
-        ]
+                sourceMap: true,
+            }),
+        ],
     },
     plugins: [
         //使用插件定义全局变量DEV
         new webpack.DefinePlugin({
-            DEV: JSON.stringify('production')
-        })
-    ]
+            DEV: JSON.stringify('production'),
+        }),
+    ],
 
 };
