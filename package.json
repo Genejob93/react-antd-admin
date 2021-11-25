@@ -23,7 +23,9 @@
     "url": "https://github.com/Genejob93/react-antd-template-admin/issues"
   },
   "homepage": "https://github.com/Genejob93/react-antd-template-admin#readme",
-  "dependencies": {},
+  "dependencies": {
+    "mockjs": "^1.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "autoprefixer": "^10.4.0",
