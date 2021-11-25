@@ -43,4 +43,4 @@ Mock.mock(/\/api\/goods\/goodsList/, "get", function (options) {
 })
 
 const data1 = [1, 2, 3, 4, 5, 6, 7, 8]
-console.log(111111, data1.slice(0, 4));
+console.log(111111, data1.slice(0, 4), data1);
