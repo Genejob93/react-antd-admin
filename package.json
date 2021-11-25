@@ -1,5 +1,5 @@
 {
-  "name": "react-antd-template-admin",
+  "name": "react-antd-hooks-admin",
   "version": "1.0.0",
   "description": "一个基于react antd 的后端管理项目模板",
   "main": "./src/index.js",
