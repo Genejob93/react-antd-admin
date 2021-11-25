@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Genejob93/react-antd-template-admin#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "mockjs": "^1.1.0"
   },
   "devDependencies": {

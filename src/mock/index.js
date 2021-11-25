@@ -28,5 +28,19 @@ const data = Mock.mock({
     },
 })
 
-// 输出结果
-console.log(JSON.stringify(data, null, 2))
+// 配置拦截 ajax 请求
+Mock.mock(/\/api\/goods\/goodsList/, "get", function (options) {
+    // 第一次配置 mock拦截 ajax, 这里之所以分步写,是因为想知道每一步的目的, 有点儿繁琐,但是好理解
+    const rUrl = options?.url // 前端请求的 url
+    const parsedUrl = url.parse(rUrl, true) // url 模块解析 请求url
+    const queryParams = parsedUrl?.query // 拿到 queryParams 请求参数
+    const {limit, page} = queryParams
+    // 根据分页条件, 返回分页数据
+    // page: 1, limit: 5, slice(0,5) 5条
+    // page: 2, limit: 5, slice(5,10) 5 条
+    // page: 3, limit: 5, slice(10,15) 5 条
+    return data.data.list.slice((page - 1) * limit, (limit * page))
+})
+
+const data1 = [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(111111, data1.slice(0, 4));
