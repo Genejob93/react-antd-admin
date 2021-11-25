@@ -10,8 +10,12 @@ axios.get("/api/goods/goodsList", {
     console.log("前端请求到的 mockjs 数据", res);
     // return
 })
-let a = 123
-console.log("1d2345678", a)
-export {
-    a,
-}
+axios.post("/api/login", {
+    name: "Gene",
+    pwd: "123456",
+})
+// let a = 123
+// console.log("1d2345678", a)
+// export {
+//     a,
+// }
