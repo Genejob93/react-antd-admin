@@ -79,6 +79,15 @@ module.exports = {
                 test: /\.js|jsx$/,
                 use: ["babel-loader"],
             },
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader"
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
+            }
         ],
     },
 
