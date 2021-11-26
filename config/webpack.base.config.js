@@ -17,20 +17,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtract = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, "../src/index.js"),
+    entry: path.resolve(__dirname, "../src/index"),
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: '[name].[hash:8].js',
     },
     // 项目中 别名的配置
     resolve: {
-        // extensions: [".js", "jsx", "tsx", ".vue", ".json", ".css", "less", "scss"],
+        // 配置导入文件时的后缀名, 自动识别后缀名
+        extensions: [".js", ".jsx", ".tsx", ".vue", ".json", ".css", ".less", ".scss"],
         alias: {
             "@": path.resolve(__dirname, "../src"),
         },
     },
     module: {
         rules: [
+            // css 文件
             {
                 test: /\.css$/,
                 use: [
@@ -54,20 +56,28 @@ module.exports = {
                     },
                 ],
             },
+            // 匹配 less 文件
             {
                 test: /\.less$/,
                 use: ["style-loader", 'css-loader', "postcss-loader", 'less-loader'],
             },
+            // 匹配 scss 文件
             {
                 test: /\.scss$/,
                 use: ["style-loader", 'css-loader', "postcss-loader", 'sass-loader'],
             },
+            // 匹配图片 等静态资源
             {
                 test: /\.(jpg|png|jpeg|bmp||gif)$/,
                 type: "asset/resource",
                 generator: {
                     filename: "[hash]-[ext]",
                 },
+            },
+            // 匹配 js 或者 jsx 文件
+            {
+                test: /\.js|jsx$/,
+                use: ["babel-loader"],
             },
         ],
     },
